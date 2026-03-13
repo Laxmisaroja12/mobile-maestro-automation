@@ -1,0 +1,5 @@
+appId: com.reputation.r4e.mobile.android
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Network & internet"
