@@ -1,0 +1,16 @@
+appId: com.reputation.r4e.mobile.android
+tags:
+  - sendfeed
+---
+- launchApp:
+    clearState: true
+- tapOn: CONTINUE WITH MAGIC LINK
+- tapOn: e.g. username@company.com
+- inputText: "ldeevi+qatest_10@reputation.com"
+- tapOn: "SEND ME A MAGIC LINK"
+- waitForAnimationToEnd
+- assertVisible: "Email Sent!"
+- assertVisible: "ldeevi+qatest_10@reputation.com"
+- tapOn: image
+- tapOn: image
+

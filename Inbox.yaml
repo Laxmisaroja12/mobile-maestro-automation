@@ -1,0 +1,36 @@
+appId: com.reputation.r4e.mobile.android
+tags:
+  - sendfeed
+---
+- launchApp:
+    clearState: true
+- tapOn: Continue with Email/Password
+- tapOn: e.g. username@company.com
+- inputText: "ldeevi+qatest242857@reputation.com"
+- tapOn: Password (case sensitive)
+- inputText: "Password@123&"
+- tapOn: Sign In
+- tapOn: "Inbox"
+- tapOn: "All Messages" # Opens the dropdown
+- tapOn: "Unread"
+- tapOn: "Unread" # Tapping the header again to open the menu
+- tapOn: "Flagged"
+- tapOn: "Flagged"
+- tapOn: "Responded"
+- tapOn: "Responded"
+- tapOn: "Not Responded"
+- tapOn: "Not Responded"
+- tapOn: "Assigned To me"
+- tapOn: "Assigned To me"
+- tapOn: "Unassigned"
+- tapOn: "Unassigned"
+- tapOn: "Assigned"
+- tapOn: "Assigned"
+- tapOn: "Closed"
+- tapOn: "Closed"
+- tapOn: "Pending Approval"
+- tapOn: "Pending Approval"
+- tapOn: "All Messages"
+- tapOn:
+    text: image
+    index: 1

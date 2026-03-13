@@ -1,0 +1,41 @@
+appId: com.reputation.r4e.mobile.android
+tags:
+  - sendfeed
+---
+- launchApp:
+    clearState: true
+- tapOn: Continue with Email/Password
+- tapOn: e.g. username@company.com
+- inputText: "ldeevi+qatest_234450_main@reputation.com"
+- tapOn: Password (case sensitive)
+- inputText: "Password@123&"
+- tapOn: Sign In
+# 1. Navigate to Reviews (assuming tapping the 'View more' or review section)
+- tapOn: "Reviews"
+- waitForAnimationToEnd
+# OR, if that fails, tap the text 'Reviews' but specifically at the bottom
+
+- scrollUntilVisible:
+    element: "Sirisha Dammalapati"
+- tapOn:
+    text: image
+    index: 2
+- tapOn: "Forward"
+
+# 3. Fill out the Forwarding Email Form
+- tapOn: "Email"
+- inputText: "ldeevi+qatest2_10@reputation.com"
+- waitForAnimationToEnd
+- tapOn: 
+    id: "subject" # Using the ID you verified in your screenshot
+- inputText: "Fwd-Android-Review"
+
+- tapOn: "Type your message..."
+- inputText: "Review-QA"
+
+# 4. Send the email
+- tapOn: SEND
+- waitForAnimationToEnd
+
+# 5. Verify return to the Reviews list
+- assertVisible: "Sirisha Dammalapati"

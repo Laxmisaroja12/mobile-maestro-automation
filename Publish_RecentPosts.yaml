@@ -1,0 +1,28 @@
+appId: com.reputation.r4e.mobile.android
+tags:
+  - sendfeed
+---
+- launchApp:
+    clearState: true
+- tapOn: Continue with Email/Password
+- tapOn: e.g. username@company.com
+- inputText: "ldeevi+qatest242857@reputation.com"
+- tapOn: Password (case sensitive)
+- inputText: "Password@123&"
+- tapOn: Sign In
+- tapOn: Drawer Openened
+- tapOn: Publish
+- tapOn: TODO
+- tapOn: Jeli Jelly ice cream
+- tapOn: NEXT
+- tapOn: Write your post...
+- inputText: "Test_Publish"
+- tapOn: NEXT
+- tapOn: SAVE THIS POST
+- tapOn: Publish Now
+- tapOn: PUBLISH
+- tapOn: Navigate up
+- tapOn: CALENDAR
+- assertVisible:
+    id: "green_tick_icon"
+- assertVisible: "Test_Publish"

@@ -1,0 +1,44 @@
+appId: com.reputation.r4e.mobile.android
+tags:
+  - sendfeed
+---
+- launchApp:
+    clearState: true
+- tapOn: Continue with Email/Password
+- tapOn: e.g. username@company.com
+- inputText: "ldeevi+qatest_10@reputation.com"
+- tapOn: Password (case sensitive)
+- inputText: "Password@123&"
+- tapOn: Sign In
+- assertVisible: "Reputation Score"
+- tapOn: "View more"
+- tapOn: "LEADERBOARD"
+- tapOn: "Reputation Score" # Dropdown to change metric
+- tapOn: "Score Change"
+- tapOn: "SCORE" # Return to Score tab
+- tapOn: Navigate up
+- tapOn: "Edit Sites"
+- tapOn:
+    id: "selection_status_icon"
+    leftOf: "Google"
+    index: 0 # Just in case Google appears twice on screen
+- tapOn: "SAVE"
+- tapOn: "Edit Sites"
+- tapOn:
+    id: "selection_status_icon"
+    leftOf: "Google"
+    index: 4 # Just in case Google appears twice on screen
+- tapOn: "SAVE"
+- evalScript: |
+    const text = maestro.getVisibleText();
+    const regex = /Reputation Score as of \d{2}\/\d{2}\/\d{4}/;
+
+    if (!regex.test(text)) {
+      throw new Error("Date format incorrect");
+    }
+
+- tapOn: "View more"
+- assertVisible: points from 30 days ago
+- assertVisible: "Industry Standard:  "
+- assertVisible: "Best In Class:  "
+- tapOn: Navigate up

@@ -1,0 +1,38 @@
+appId: com.reputation.r4e.mobile.android
+tags:
+  - sendfeed
+---
+- launchApp:
+    clearState: true
+- tapOn: Continue with Email/Password
+- tapOn: e.g. username@company.com
+- inputText: "ldeevi+qatest1173_mfa@reputation.com"
+- tapOn: Password (case sensitive)
+- inputText: "Password@123&"
+- tapOn: Sign In
+- waitForAnimationToEnd
+- tapOn: "QA-TEST TestingTenant"
+- tapOn: "OK"
+- waitForAnimationToEnd
+
+# 3. Open Hamburger Menu and go to Settings (00:12)
+- tapOn: Drawer Openened
+- tapOn: "Settings"
+
+# 4. Navigate Settings Options (00:14)
+- tapOn: "Locations"
+- tapOn: Location
+- tapOn: Navigate up
+
+- tapOn: "Switch Tenant"
+- tapOn: "QA-TEST-Sravan-do-not-change-any-config-sudha" # Selecting the active one in the list (00:25)
+- tapOn: Navigate up
+
+# 5. Exploring Deep Location Lists (00:28)
+- tapOn: "Locations"
+- tapOn: Location
+- tapOn: "Brand"
+- tapOn: Navigate up
+- tapOn: Navigate up
+- tapOn: Log Out
+- tapOn: OK

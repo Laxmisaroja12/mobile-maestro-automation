@@ -1,0 +1,57 @@
+appId: com.reputation.r4e.mobile.android
+tags:
+  - sendfeed
+---
+- launchApp:
+    clearState: true
+- tapOn: Continue with Email/Password
+- tapOn: e.g. username@company.com
+- inputText: "ldeevi+qatest_234450_main@reputation.com"
+- tapOn: Password (case sensitive)
+- inputText: "Password@123&"
+- tapOn: Sign In
+
+- tapOn:
+    id: "fab"
+
+- tapOn:
+    id: "fab_request_reviews_button"
+
+- tapOn:
+    text: ".*"
+    index: 1
+    below: "Search location"
+
+- tapOn: "Customer Full Name"
+- inputText: "saroja"
+- tapOn: "Phone Number"
+- inputText: "4846479598"
+
+- tapOn:
+    text: "Image"
+    index: 2
+- tapOn:
+    text: image
+    index: 5
+
+
+- tapOn: "View more"
+- tapOn: "Send SMS"
+
+# 7. Success Verification
+- assertVisible: "Review Request Sent!"
+- tapOn: "OK"
+
+- tapOn: "Edit Sites"
+- tapOn:
+    id: "selection_status_icon"
+    leftOf: "Google"
+    index: 0 # Just in case Google appears twice on screen
+- tapOn: "SAVE"
+- tapOn: Navigate up
+- tapOn: "Edit Sites"
+- tapOn:
+    id: "selection_status_icon"
+    leftOf: "Google"
+    index: 4 # Just in case Google appears twice on screen
+- tapOn: "SAVE"

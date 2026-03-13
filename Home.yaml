@@ -1,0 +1,93 @@
+appId: com.reputation.r4e.mobile.android
+tags:
+  - sendfeed
+---
+- launchApp:
+    clearState: true
+- tapOn: Continue with Email/Password
+- tapOn: e.g. username@company.com
+- inputText: "ldeevi+qatest_10@reputation.com"
+- tapOn: Password (case sensitive)
+- inputText: "Password@123&"
+- tapOn: Sign In
+- tapOn:
+    text: image
+    index: 1
+- tapOn: "Date Range"
+- scrollUntilVisible:
+    element: "Previous Year"
+    direction: DOWN
+- tapOn: "Previous Year"
+- tapOn: Navigate up
+- waitForAnimationToEnd
+- assertVisible: ".*Previous Year.*"
+- tapOn: Navigate up
+- waitForAnimationToEnd
+# Verify Widgets slowly as requested
+- scrollUntilVisible:
+    element: "Review Metrics"
+    direction: DOWN
+- assertVisible: "Review Metrics"
+
+- scrollUntilVisible:
+    element: "Review Sites"
+    direction: DOWN
+- assertVisible: "Review Sites"
+
+- scrollUntilVisible:
+    element: "Review Sentiment %"
+    direction: DOWN
+- assertVisible: "Review Sentiment %"
+
+- scrollUntilVisible:
+    element: "Social Metrics"
+    direction: DOWN
+- assertVisible: "Social Metrics"
+
+- scrollUntilVisible:
+    element: "Survey NPS Trend"
+    direction: DOWN
+- assertVisible: "Survey NPS Trend"
+
+- scrollUntilVisible:
+    element: "Action Metrics"
+    direction: DOWN
+- assertVisible: "Action Metrics"
+
+# Interaction with Positively Trending Category
+- scrollUntilVisible:
+    element: "Positively Trending Categories"
+    direction: DOWN
+- tapOn:
+    id: "trending_category_title" # Tapping the first category row
+    index: 0
+- tapOn: "View Full Review"
+- tapOn: Navigate up
+- tapOn: Navigate up
+# Interaction with Negatively Trending Category
+- scrollUntilVisible:
+    element: "Negatively Trending Categories"
+    direction: DOWN
+- tapOn:
+    id: "trending_category_title" # Tapping the first category row
+    index: 0
+- tapOn: "View Full Review"
+- tapOn: Navigate up
+- tapOn: Navigate up
+# Interaction with Review Response rates
+- scrollUntilVisible:
+    element: "Review Response Rates by Sentiment"
+    direction: DOWN
+- tapOn:
+    text: image
+    index: 5
+- tapOn: Navigate up
+
+# Interaction with Survey Response rates
+- scrollUntilVisible:
+    element: "Survey Response Rates by Sentiment"
+    direction: DOWN
+- tapOn:
+    text: image
+    index: 7
+- tapOn: Navigate up

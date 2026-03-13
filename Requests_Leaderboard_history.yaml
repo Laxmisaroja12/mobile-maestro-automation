@@ -1,0 +1,35 @@
+appId: com.reputation.r4e.mobile.android
+tags:
+  - sendfeed
+---
+- launchApp:
+    clearState: true
+- tapOn: Continue with Email/Password
+- tapOn: e.g. username@company.com
+- inputText: "ldeevi+qatest_234450@reputation.com"
+- tapOn: Password (case sensitive)
+- inputText: "Password@123&"
+- tapOn: Sign In
+- tapOn: Drawer Openened
+- tapOn: Requests
+- waitForAnimationToEnd
+- tapOn: Requester
+- tapOn: Location
+- waitForAnimationToEnd
+- tapOn: image
+- tapOn: Date Range
+- tapOn: Previous Year
+- waitForAnimationToEnd
+- tapOn: Navigate up
+- tapOn: Navigate up
+- tapOn: HISTORY
+- tapOn: All Modes
+- waitForAnimationToEnd
+- tapOn: Email
+- tapOn: Email
+- waitForAnimationToEnd
+- tapOn: SMS
+- tapOn: SMS
+- waitForAnimationToEnd
+- tapOn: Kiosk
+- tapOn: Navigate up
